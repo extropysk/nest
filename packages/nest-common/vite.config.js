@@ -26,7 +26,7 @@ export default defineConfig({
       name: formattedName,
     },
     rollupOptions: {
-      external: ['@nestjs/common'],
+      external: ['@nestjs/common', 'nestjs-zod', 'zod'],
     },
   },
 })
