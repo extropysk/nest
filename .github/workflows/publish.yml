@@ -21,7 +21,7 @@ jobs:
 
       - run: yarn workspace @extropysk/nest-common build
 
-      - name: Release nest-common
+      - name: Release common
         working-directory: packages/nest-common
         run: npx semantic-release
         env:
@@ -42,7 +42,7 @@ jobs:
       - run: yarn workspace @extropysk/nest-common build
       - run: yarn workspace @extropysk/nest-mongo build
 
-      - name: Release nest-mongo
+      - name: Release mongo
         working-directory: packages/nest-mongo
         run: npx semantic-release
         env:
