@@ -1,3 +1,11 @@
+# [@extropysk/nest-mongo-v1.1.3](https://github.com/extropysk/nest/compare/mongo-v1.1.2...mongo-v1.1.3) (2026-02-20)
+
+
+### Bug Fixes
+
+* fix mongo monorepo ([9df5b7b](https://github.com/extropysk/nest/commit/9df5b7b56c3d19eb5c7ad1d7118dcc1db41a3508))
+* fix monorepo ([59dff1d](https://github.com/extropysk/nest/commit/59dff1df65651bc9220aae07b66377823832219e))
+
 # [@extropysk/nest-mongo-v1.1.2](https://github.com/extropysk/nest/compare/mongo-v1.1.1...mongo-v1.1.2) (2026-02-20)
 
 
