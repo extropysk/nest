@@ -9,17 +9,17 @@ permissions:
   contents: write
 
 jobs:
-  publish-common:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
 
-      - run: yarn workspace @extropysk/nest-common build
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
 
       - name: Release common
         working-directory: packages/nest-common
@@ -28,40 +28,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  publish-mongo:
-    needs: publish-common
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
-
-      - run: yarn workspace @extropysk/nest-common build
-      - run: yarn workspace @extropysk/nest-mongo build
-
       - name: Release mongo
         working-directory: packages/nest-mongo
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  publish-pg:
-    needs: publish-common
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
-
-      - run: yarn workspace @extropysk/nest-common build
-      - run: yarn workspace @extropysk/nest-pg build
 
       - name: Release pg
         working-directory: packages/nest-pg

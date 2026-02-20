@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "tsc && vite build --watch",
     "build": "tsc && vite build",
-    "test": "vitest",
+    "test": "vitest run",
     "lint": "eslint ./src --ext .ts"
   },
   "devDependencies": {

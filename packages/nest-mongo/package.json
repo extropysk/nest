@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "tsc && vite build --watch",
     "build": "tsc && vite build",
-    "test": "vitest",
+    "test": "vitest run",
     "lint": "eslint ./src --ext .ts"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "semantic-release-monorepo": "^8.0.2"
   },
   "dependencies": {
-    "@extropysk/nest-common": "*"
+    "@extropysk/nest-common": ">=1.0.0"
   },
   "peerDependencies": {
     "@nestjs/common": ">=9.0.0",
