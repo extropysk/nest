@@ -1,3 +1,10 @@
+# [@extropysk/nest-mongo-v1.1.4](https://github.com/extropysk/nest/compare/mongo-v1.1.3...mongo-v1.1.4) (2026-02-20)
+
+
+### Bug Fixes
+
+* fix mongo readme ([349d15d](https://github.com/extropysk/nest/commit/349d15dc0120e2396cf7892f657dee2d386750cf))
+
 # [@extropysk/nest-mongo-v1.1.3](https://github.com/extropysk/nest/compare/mongo-v1.1.2...mongo-v1.1.3) (2026-02-20)
 
 
